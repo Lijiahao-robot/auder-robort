@@ -1,0 +1,190 @@
+<mujoco model="centaur_teaching_robot">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.81" cone="elliptic" />
+  <default>
+    <joint damping="0.8" armature="0.035" frictionloss="0.12" />
+    <geom contype="1" conaffinity="2" friction="1.0 0.03 0.003" condim="3" group="1" solref="0.008 1" />
+    <motor ctrllimited="true" ctrlrange="-90 90" />
+  </default>
+  <visual>
+    <global offwidth="1280" offheight="720" />
+    <quality shadowsize="2048" />
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" />
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.035 0.05 0.075" rgb2="0.15 0.19 0.23" width="512" height="512" />
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.12 0.16 0.19" rgb2="0.09 0.12 0.15" width="512" height="512" />
+    <material name="shell" rgba="0.73 0.79 0.82 1" specular="0.5" shininess="0.55" />
+    <material name="dark" rgba="0.07 0.10 0.14 1" specular="0.5" shininess="0.55" />
+    <material name="amber" rgba="0.96 0.49 0.15 1" specular="0.5" shininess="0.55" />
+    <material name="visor" rgba="0.03 0.10 0.15 1" specular="0.5" shininess="0.55" />
+    <material name="floor_mat" texture="grid" texrepeat="30 30" reflectance="0.08" />
+  </asset>
+  <worldbody>
+    <light pos="2 -3 5" dir="-0.4 0.6 -1" diffuse="0.8 0.8 0.8" castshadow="true" />
+    <light pos="-2 2 3" dir="0.5 -0.5 -1" diffuse="0.25 0.35 0.45" castshadow="false" />
+    <geom name="ground" type="plane" size="20 20 0.1" material="floor_mat" contype="2" conaffinity="1" group="2" />
+    <body name="trunk" pos="0 0 0.62">
+      <freejoint name="floating_base" />
+      <geom name="chassis" type="box" size="0.37 0.16 0.10" material="dark" mass="14" />
+      <geom type="capsule" fromto="-0.25 0 0.04 0.25 0 0.04" size="0.15" material="shell" mass="0.8" />
+      <geom type="box" size="0.17 0.13 0.07" pos="-0.20 0 0.14" material="dark" mass="4" />
+      <geom type="box" size="0.32 0.165 0.012" pos="0 0 0.06" material="amber" mass="0.1" contype="0" conaffinity="0" />
+      <body name="FL_hip" pos="0.31 0.225 -0.025">
+        <joint name="FL_abduction_joint" axis="1 0 0" range="-0.55 0.55" />
+        <geom type="sphere" size="0.065" material="amber" mass="0.35" />
+        <body name="FL_thigh">
+          <joint name="FL_hip_joint" axis="0 1 0" range="-1.4 1.0" />
+          <geom type="capsule" fromto="0 0 -0.035 0 0 -0.265" size="0.043" material="shell" mass="1.4" />
+          <body name="FL_shin" pos="0 0 -0.3">
+            <joint name="FL_knee_joint" axis="0 1 0" range="0.05 2.3" />
+            <geom type="sphere" size="0.057" material="dark" mass="0.15" />
+            <geom type="capsule" fromto="0 0 -0.025 0 0 -0.27499999999999997" size="0.032" material="shell" mass="0.95" />
+            <body name="FL_foot" pos="0 0 -0.3">
+              <geom name="FL_pad" type="sphere" size="0.042" material="dark" mass="0.15" />
+              <site name="FL_toe" size="0.01" rgba="1 0.5 0.1 0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="FR_hip" pos="0.31 -0.225 -0.025">
+        <joint name="FR_abduction_joint" axis="1 0 0" range="-0.55 0.55" />
+        <geom type="sphere" size="0.065" material="amber" mass="0.35" />
+        <body name="FR_thigh">
+          <joint name="FR_hip_joint" axis="0 1 0" range="-1.4 1.0" />
+          <geom type="capsule" fromto="0 0 -0.035 0 0 -0.265" size="0.043" material="shell" mass="1.4" />
+          <body name="FR_shin" pos="0 0 -0.3">
+            <joint name="FR_knee_joint" axis="0 1 0" range="0.05 2.3" />
+            <geom type="sphere" size="0.057" material="dark" mass="0.15" />
+            <geom type="capsule" fromto="0 0 -0.025 0 0 -0.27499999999999997" size="0.032" material="shell" mass="0.95" />
+            <body name="FR_foot" pos="0 0 -0.3">
+              <geom name="FR_pad" type="sphere" size="0.042" material="dark" mass="0.15" />
+              <site name="FR_toe" size="0.01" rgba="1 0.5 0.1 0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip" pos="-0.31 0.225 -0.025">
+        <joint name="RL_abduction_joint" axis="1 0 0" range="-0.55 0.55" />
+        <geom type="sphere" size="0.065" material="amber" mass="0.35" />
+        <body name="RL_thigh">
+          <joint name="RL_hip_joint" axis="0 1 0" range="-1.4 1.0" />
+          <geom type="capsule" fromto="0 0 -0.035 0 0 -0.265" size="0.043" material="shell" mass="1.4" />
+          <body name="RL_shin" pos="0 0 -0.3">
+            <joint name="RL_knee_joint" axis="0 1 0" range="0.05 2.3" />
+            <geom type="sphere" size="0.057" material="dark" mass="0.15" />
+            <geom type="capsule" fromto="0 0 -0.025 0 0 -0.27499999999999997" size="0.032" material="shell" mass="0.95" />
+            <body name="RL_foot" pos="0 0 -0.3">
+              <geom name="RL_pad" type="sphere" size="0.042" material="dark" mass="0.15" />
+              <site name="RL_toe" size="0.01" rgba="1 0.5 0.1 0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_hip" pos="-0.31 -0.225 -0.025">
+        <joint name="RR_abduction_joint" axis="1 0 0" range="-0.55 0.55" />
+        <geom type="sphere" size="0.065" material="amber" mass="0.35" />
+        <body name="RR_thigh">
+          <joint name="RR_hip_joint" axis="0 1 0" range="-1.4 1.0" />
+          <geom type="capsule" fromto="0 0 -0.035 0 0 -0.265" size="0.043" material="shell" mass="1.4" />
+          <body name="RR_shin" pos="0 0 -0.3">
+            <joint name="RR_knee_joint" axis="0 1 0" range="0.05 2.3" />
+            <geom type="sphere" size="0.057" material="dark" mass="0.15" />
+            <geom type="capsule" fromto="0 0 -0.025 0 0 -0.27499999999999997" size="0.032" material="shell" mass="0.95" />
+            <body name="RR_foot" pos="0 0 -0.3">
+              <geom name="RR_pad" type="sphere" size="0.042" material="dark" mass="0.15" />
+              <site name="RR_toe" size="0.01" rgba="1 0.5 0.1 0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="waist_yaw" pos="0.22 0 0.13">
+        <joint name="waist_yaw_joint" axis="0 0 1" range="-0.7 0.7" />
+        <geom type="cylinder" size="0.075 0.04" material="dark" mass="0.6" />
+        <body name="waist_roll" pos="0 0 0.04">
+          <joint name="waist_roll_joint" axis="1 0 0" range="-0.35 0.35" />
+          <geom type="sphere" size="0.068" material="amber" mass="0.4" />
+          <body name="torso" pos="0 0 0.04">
+            <joint name="waist_pitch_joint" axis="0 1 0" range="-0.35 0.35" />
+            <geom type="box" size="0.105 0.155 0.17" pos="0 0 0.19" material="shell" mass="6" />
+            <geom type="box" size="0.025 0.09 0.075" pos="0.115 0 0.23" material="dark" mass="0.15" />
+            <geom type="box" size="0.008 0.07 0.012" pos="0.145 0 0.25" material="amber" mass="0.02" contype="0" conaffinity="0" />
+            <body name="neck" pos="0 0 0.41">
+              <joint name="head_yaw_joint" axis="0 0 1" range="-1.1 1.1" />
+              <geom type="cylinder" size="0.04 0.035" material="dark" mass="0.2" />
+              <body name="head" pos="0 0 0.065">
+                <joint name="head_pitch_joint" axis="0 1 0" range="-0.45 0.45" />
+                <geom type="box" size="0.075 0.083 0.075" pos="0 0 0.04" material="shell" mass="1.0" />
+                <geom type="box" size="0.013 0.072 0.027" pos="0.079 0 0.055" material="visor" mass="0.05" />
+                <geom type="box" size="0.006 0.055 0.006" pos="0.094 0 0.055" material="amber" mass="0.01" contype="0" conaffinity="0" />
+              </body>
+            </body>
+            <body name="left_shoulder" pos="0 0.205 0.34">
+              <joint name="left_shoulder_pitch_joint" axis="0 1 0" range="-2.1 1.0" />
+              <geom type="sphere" size="0.055" material="dark" mass="0.35" />
+              <body name="left_upper_arm">
+                <joint name="left_shoulder_roll_joint" axis="1 0 0" range="-1.6 1.6" />
+                <geom type="capsule" fromto="0 0 -0.03 0 0 -0.21" size="0.035" material="shell" mass="0.9" />
+                <body name="left_forearm" pos="0 0 -0.24">
+                  <joint name="left_elbow_joint" axis="0 1 0" range="-2.1 0.15" />
+                  <geom type="sphere" size="0.042" material="amber" mass="0.15" />
+                  <geom type="capsule" fromto="0 0 -0.02 0 0 -0.19" size="0.03" material="shell" mass="0.65" />
+                  <body name="left_hand" pos="0 0 -0.22">
+                    <joint name="left_wrist_joint" axis="0 0 1" range="-1.3 1.3" />
+                    <geom type="box" size="0.035 0.045 0.055" pos="0 0 -0.03" material="dark" mass="0.3" />
+                    <geom type="box" size="0.008 0.047 0.025" pos="0.035 0 -0.03" material="amber" mass="0.02" contype="0" conaffinity="0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body name="right_shoulder" pos="0 -0.205 0.34">
+              <joint name="right_shoulder_pitch_joint" axis="0 1 0" range="-2.1 1.0" />
+              <geom type="sphere" size="0.055" material="dark" mass="0.35" />
+              <body name="right_upper_arm">
+                <joint name="right_shoulder_roll_joint" axis="1 0 0" range="-1.6 1.6" />
+                <geom type="capsule" fromto="0 0 -0.03 0 0 -0.21" size="0.035" material="shell" mass="0.9" />
+                <body name="right_forearm" pos="0 0 -0.24">
+                  <joint name="right_elbow_joint" axis="0 1 0" range="-2.1 0.15" />
+                  <geom type="sphere" size="0.042" material="amber" mass="0.15" />
+                  <geom type="capsule" fromto="0 0 -0.02 0 0 -0.19" size="0.03" material="shell" mass="0.65" />
+                  <body name="right_hand" pos="0 0 -0.22">
+                    <joint name="right_wrist_joint" axis="0 0 1" range="-1.3 1.3" />
+                    <geom type="box" size="0.035 0.045 0.055" pos="0 0 -0.03" material="dark" mass="0.3" />
+                    <geom type="box" size="0.008 0.047 0.025" pos="0.035 0 -0.03" material="amber" mass="0.02" contype="0" conaffinity="0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="FL_abduction" joint="FL_abduction_joint" ctrlrange="-90 90" />
+    <motor name="FL_hip" joint="FL_hip_joint" ctrlrange="-90 90" />
+    <motor name="FL_knee" joint="FL_knee_joint" ctrlrange="-90 90" />
+    <motor name="FR_abduction" joint="FR_abduction_joint" ctrlrange="-90 90" />
+    <motor name="FR_hip" joint="FR_hip_joint" ctrlrange="-90 90" />
+    <motor name="FR_knee" joint="FR_knee_joint" ctrlrange="-90 90" />
+    <motor name="RL_abduction" joint="RL_abduction_joint" ctrlrange="-90 90" />
+    <motor name="RL_hip" joint="RL_hip_joint" ctrlrange="-90 90" />
+    <motor name="RL_knee" joint="RL_knee_joint" ctrlrange="-90 90" />
+    <motor name="RR_abduction" joint="RR_abduction_joint" ctrlrange="-90 90" />
+    <motor name="RR_hip" joint="RR_hip_joint" ctrlrange="-90 90" />
+    <motor name="RR_knee" joint="RR_knee_joint" ctrlrange="-90 90" />
+    <motor name="waist_yaw" joint="waist_yaw_joint" ctrlrange="-50 50" />
+    <motor name="waist_roll" joint="waist_roll_joint" ctrlrange="-60 60" />
+    <motor name="waist_pitch" joint="waist_pitch_joint" ctrlrange="-60 60" />
+    <motor name="head_yaw" joint="head_yaw_joint" ctrlrange="-15 15" />
+    <motor name="head_pitch" joint="head_pitch_joint" ctrlrange="-15 15" />
+    <motor name="left_shoulder_pitch" joint="left_shoulder_pitch_joint" ctrlrange="-40 40" />
+    <motor name="left_shoulder_roll" joint="left_shoulder_roll_joint" ctrlrange="-30 30" />
+    <motor name="left_elbow" joint="left_elbow_joint" ctrlrange="-25 25" />
+    <motor name="left_wrist" joint="left_wrist_joint" ctrlrange="-12 12" />
+    <motor name="right_shoulder_pitch" joint="right_shoulder_pitch_joint" ctrlrange="-40 40" />
+    <motor name="right_shoulder_roll" joint="right_shoulder_roll_joint" ctrlrange="-30 30" />
+    <motor name="right_elbow" joint="right_elbow_joint" ctrlrange="-25 25" />
+    <motor name="right_wrist" joint="right_wrist_joint" ctrlrange="-12 12" />
+  </actuator>
+</mujoco>

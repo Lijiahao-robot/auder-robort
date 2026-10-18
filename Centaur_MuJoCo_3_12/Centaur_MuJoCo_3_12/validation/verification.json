@@ -1,0 +1,100 @@
+{
+  "validation_date": "2026-10-16",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "mujoco_version": "3.12.0",
+  "pillow_version": "12.3.0",
+  "model": {
+    "original_teaching_model": true,
+    "actuated_joints": 25,
+    "floating_base_dofs": 6,
+    "total_mass_kg": 44.07,
+    "self_collision_enabled": false
+  },
+  "python_tests": {
+    "distinct_tests_passed": 17,
+    "failures": 0,
+    "errors": 0,
+    "runs": [
+      {
+        "command": "python -m unittest discover -s tests -v",
+        "tests": 16,
+        "passed": true
+      },
+      {
+        "command": "python -m unittest tests.test_centaur.PhysicsTests.test_manual_reverse_lateral_turn_and_combined_commands -v",
+        "tests": 1,
+        "passed": true
+      }
+    ]
+  },
+  "physics_validation": {
+    "scenarios": 6,
+    "simulated_seconds_each": 12,
+    "assist_enabled": true,
+    "max_tilt_deg": 3.442329920371422,
+    "max_joint_limit_violation_rad": 0.0,
+    "all_stayed_upright": true,
+    "contact_solved": true
+  },
+  "manual_velocity_validation": {
+    "scenarios": 4,
+    "simulated_seconds_each": 8,
+    "all_stayed_upright": true
+  },
+  "assistance_disabled_external_wrench_zero": true,
+  "unassisted_locomotion_verified": false,
+  "keyboard_mapping": {
+    "command": "node tests/test_input.mjs",
+    "passed": true,
+    "browser_key_events_tested": false
+  },
+  "live_physics_renderer_thread": {
+    "passed": true,
+    "real_mujoco": true,
+    "image_size": [
+      960,
+      640
+    ],
+    "pause_reset": true,
+    "input_timeout_zero": true
+  },
+  "web_http_protocol": {
+    "passed": true,
+    "static_assets": true,
+    "session_key": true,
+    "host_origin": true,
+    "report_download": true
+  },
+  "bootstrap": {
+    "first_install_in_separate_venv": true,
+    "second_check_passed": true,
+    "exact_mujoco_and_PIL_imports_passed": true,
+    "global_runtime_overwritten": false
+  },
+  "syntax_checks": {
+    "python": true,
+    "javascript": true
+  },
+  "video": {
+    "passed": true,
+    "duration_s": 14.0,
+    "fps": 30.0,
+    "size": [
+      960,
+      640
+    ],
+    "codec": "h264",
+    "four_frames_decoded": true
+  },
+  "browser_visual_verified": false,
+  "native_viewer_visual_verified": false,
+  "windows_double_click_tested": false,
+  "hardware_connected": false,
+  "limitations": [
+    "Default walking uses external stabilization forces and torques.",
+    "Original illustrative masses and geometry, not a specific commercial robot.",
+    "Self-collision and unassisted locomotion are not validated.",
+    "HTTP and input mapping tests are not browser interaction tests."
+  ]
+}

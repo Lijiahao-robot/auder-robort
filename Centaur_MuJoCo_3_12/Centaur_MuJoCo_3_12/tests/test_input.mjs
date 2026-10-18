@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {normalizeKey,velocityForKeys} from '../web/input.js';
+assert.equal(normalizeKey('KeyW'),'w');assert.equal(normalizeKey('ArrowLeft'),'a');assert.equal(normalizeKey('Space'),'space');assert.equal(normalizeKey('Escape'),null);
+assert.deepEqual(velocityForKeys(new Set()),{vx:0,vy:0,yaw:0});
+assert.deepEqual(velocityForKeys(new Set(['w'])),{vx:.12,vy:0,yaw:0});
+assert.deepEqual(velocityForKeys(new Set(['w','s','q','e'])),{vx:0,vy:0,yaw:0});
+const diagonal=velocityForKeys(new Set(['w','a','q']));
+assert.ok(Math.abs(diagonal.vx/.12)**2+Math.abs(diagonal.vy/.08)**2<=1.000001);assert.equal(diagonal.yaw,.3);
+assert.deepEqual(velocityForKeys(new Set(['s','d'])),{vx:-.12/Math.sqrt(2),vy:-.08/Math.sqrt(2),yaw:0});
+console.log('Keyboard mapping, opposing keys, diagonal limits and release-to-zero passed.');
