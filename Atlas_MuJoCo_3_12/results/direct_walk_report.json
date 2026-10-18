@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "error": null,
+  "wall_seconds": 4.992,
+  "model_sha256": "b9a807ee858f9ef980ed21a120385f80fb9beaf3564430ed2eca497a257d0e96",
+  "physics_step_seconds": 0.002,
+  "control_step_seconds": 0.008,
+  "warnings": {},
+  "model_generation": "legacy hydraulic Atlas derivative",
+  "controller": "tutorial weighted inverse dynamics / ground CoP load allocation",
+  "visual_replay": false,
+  "external_base_support": false,
+  "state": {
+    "mujoco_version": "3.12.0",
+    "time": 30.0,
+    "mode": "walk",
+    "phase": "shift",
+    "paused": false,
+    "fallen": false,
+    "pelvis_xyz": [
+      0.8208608990199565,
+      -0.09268611655514737,
+      0.8930546406267249
+    ],
+    "com_xyz": [
+      0.8267784738798988,
+      -0.10294678741809923,
+      1.1452925958974256
+    ],
+    "max_tilt_deg": 0.3477919628704102,
+    "step_count": 9,
+    "distance_m": 2.0327947382157068,
+    "foot_normal_N": [
+      12.882918205065952,
+      1671.5748695524348
+    ],
+    "max_torque_ratio": 0.2703421226173252,
+    "actuators": 27,
+    "mass_kg": 171.6626,
+    "external_support": false,
+    "forward_command": 0.03,
+    "yaw_command": 0.0,
+    "pelvis_yaw_rad": 0.002391973908504374
+  },
+  "events": []
+}

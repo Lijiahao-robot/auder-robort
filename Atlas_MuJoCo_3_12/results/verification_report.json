@@ -1,0 +1,771 @@
+{
+  "mujoco_version": "3.12.0",
+  "python": "3.12.14",
+  "platform": "linux",
+  "all_passed": true,
+  "case_count": 10,
+  "wall_seconds": 61.28,
+  "note": "Headless physics tests. Real MuJoCo contacts and torque actuators. No RL policy.",
+  "checks": [
+    {
+      "name": "stand_45s",
+      "passed": true,
+      "requested_seconds": 45,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 48.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.01545644379120999,
+          -0.0007482599853954638,
+          0.8934373574985875
+        ],
+        "com_xyz": [
+          0.031087627657889513,
+          2.26003428141298e-06,
+          1.1460544402729465
+        ],
+        "max_tilt_deg": 0.261308509597395,
+        "step_count": 0,
+        "distance_m": 0.018570871061856366,
+        "foot_normal_N": [
+          842.0177498800728,
+          841.9923581104393
+        ],
+        "max_torque_ratio": 0.14533713825660574,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -2.0334838006704907e-06
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 48.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.01545644379120999,
+          -0.0007482599853954638,
+          0.8934373574985875
+        ],
+        "com_xyz": [
+          0.031087627657889513,
+          2.26003428141298e-06,
+          1.1460544402729465
+        ],
+        "max_tilt_deg": 0.261308509597395,
+        "step_count": 0,
+        "distance_m": 0.018570871061856366,
+        "foot_normal_N": [
+          842.0177498800728,
+          841.9923581104393
+        ],
+        "max_torque_ratio": 0.14533713825660574,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -2.0334838006704907e-06
+      },
+      "net_pelvis_displacement_m": [
+        4.149098567841555e-06,
+        -2.552486881705375e-07,
+        -5.915021517033381e-07
+      ],
+      "minimum_pelvis_height_m": 0.8934373574985875,
+      "max_sole_height_m": [
+        0.0018729893314471946,
+        0.0018729964813118533
+      ],
+      "off_ground_samples": [
+        0,
+        0
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "wave_15s",
+      "passed": true,
+      "requested_seconds": 15,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 18.0,
+        "mode": "wave",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.010374877077955279,
+          0.01531124464279113,
+          0.8743693414836511
+        ],
+        "com_xyz": [
+          0.031105728188672608,
+          -2.159516533166121e-05,
+          1.1474415277283654
+        ],
+        "max_tilt_deg": 0.261308509597395,
+        "step_count": 0,
+        "distance_m": 0.05003121851703528,
+        "foot_normal_N": [
+          841.5984935722295,
+          842.4110626839265
+        ],
+        "max_torque_ratio": 0.2461556498613281,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 6.867971602761758e-05
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 18.0,
+        "mode": "wave",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.010374877077955279,
+          0.01531124464279113,
+          0.8743693414836511
+        ],
+        "com_xyz": [
+          0.031105728188672608,
+          -2.159516533166121e-05,
+          1.1474415277283654
+        ],
+        "max_tilt_deg": 0.261308509597395,
+        "step_count": 0,
+        "distance_m": 0.05003121851703528,
+        "foot_normal_N": [
+          841.5984935722295,
+          842.4110626839265
+        ],
+        "max_torque_ratio": 0.2461556498613281,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 6.867971602761758e-05
+      },
+      "net_pelvis_displacement_m": [
+        -0.00507783920323324,
+        0.01606159986492998,
+        -0.01906854500851829
+      ],
+      "minimum_pelvis_height_m": 0.8743629821871817,
+      "max_sole_height_m": [
+        0.0018765652440214386,
+        0.0018763231210333492
+      ],
+      "off_ground_samples": [
+        0,
+        0
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "squat_20s",
+      "passed": true,
+      "requested_seconds": 20,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 23.0,
+        "mode": "squat",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.015388744744143664,
+          -0.0007201448556532463,
+          0.8936483722665095
+        ],
+        "com_xyz": [
+          0.031109780010742407,
+          -4.1826725542154004e-06,
+          1.1462379891982517
+        ],
+        "max_tilt_deg": 3.5983146008805598,
+        "step_count": 0,
+        "distance_m": 0.6397108440203544,
+        "foot_normal_N": [
+          836.1273809577491,
+          836.6649732862645
+        ],
+        "max_torque_ratio": 0.23833807530955892,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 1.9716050171806226e-05
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 23.0,
+        "mode": "squat",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.015388744744143664,
+          -0.0007201448556532463,
+          0.8936483722665095
+        ],
+        "com_xyz": [
+          0.031109780010742407,
+          -4.1826725542154004e-06,
+          1.1462379891982517
+        ],
+        "max_tilt_deg": 3.5983146008805598,
+        "step_count": 0,
+        "distance_m": 0.6397108440203544,
+        "foot_normal_N": [
+          836.1273809577491,
+          836.6649732862645
+        ],
+        "max_torque_ratio": 0.23833807530955892,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 1.9716050171806226e-05
+      },
+      "net_pelvis_displacement_m": [
+        -6.306577230688788e-05,
+        2.7634149318426777e-05,
+        0.00020810511276003751
+      ],
+      "minimum_pelvis_height_m": 0.8010937005372514,
+      "max_sole_height_m": [
+        0.0018751421710447302,
+        0.0018741412943903968
+      ],
+      "off_ground_samples": [
+        0,
+        0
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "dance_20s",
+      "passed": true,
+      "requested_seconds": 20,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 23.0,
+        "mode": "dance",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.00553595561710507,
+          0.0916801870079934,
+          0.8397264153477274
+        ],
+        "com_xyz": [
+          0.031075883843585984,
+          -0.006536693646497737,
+          1.1037719294010147
+        ],
+        "max_tilt_deg": 0.3045666588836457,
+        "step_count": 0,
+        "distance_m": 0.9655925217581838,
+        "foot_normal_N": [
+          745.9116563720787,
+          953.4619678416799
+        ],
+        "max_torque_ratio": 0.5687493727935952,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 0.0009245388850513748
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 23.0,
+        "mode": "dance",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.00553595561710507,
+          0.0916801870079934,
+          0.8397264153477274
+        ],
+        "com_xyz": [
+          0.031075883843585984,
+          -0.006536693646497737,
+          1.1037719294010147
+        ],
+        "max_tilt_deg": 0.3045666588836457,
+        "step_count": 0,
+        "distance_m": 0.9655925217581838,
+        "foot_normal_N": [
+          745.9116563720787,
+          953.4619678416799
+        ],
+        "max_torque_ratio": 0.5687493727935952,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 0.0009245388850513748
+      },
+      "net_pelvis_displacement_m": [
+        -0.009937766071096463,
+        0.09245100020175712,
+        -0.053670554078443566
+      ],
+      "minimum_pelvis_height_m": 0.8315616908262728,
+      "max_sole_height_m": [
+        0.001901765120323029,
+        0.0019032282249753507
+      ],
+      "off_ground_samples": [
+        0,
+        0
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "forward_40s_then_stop",
+      "passed": true,
+      "requested_seconds": 40,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 43.0,
+        "mode": "walk",
+        "phase": "shift",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          1.1210180036785058,
+          0.08310092226240225,
+          0.8931170840762134
+        ],
+        "com_xyz": [
+          1.127868200626454,
+          0.09374662452342714,
+          1.145392220266541
+        ],
+        "max_tilt_deg": 0.3472796739127301,
+        "step_count": 12,
+        "distance_m": 2.770824410949647,
+        "foot_normal_N": [
+          1671.6384393200983,
+          12.489166336012707
+        ],
+        "max_torque_ratio": 0.2703321918307931,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.03,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -0.0022865587953262755
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 51.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          1.1543051563870106,
+          -0.0007519332731951752,
+          0.8931920064252147
+        ],
+        "com_xyz": [
+          1.169433263599308,
+          4.652984894999284e-05,
+          1.145803452511694
+        ],
+        "max_tilt_deg": 0.3472796739127301,
+        "step_count": 12,
+        "distance_m": 3.0760669409536,
+        "foot_normal_N": [
+          879.0673842018269,
+          804.942710990805
+        ],
+        "max_torque_ratio": 0.2703321918307931,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -0.0023196263283196896
+      },
+      "net_pelvis_displacement_m": [
+        1.1388528611772373,
+        -3.924970674396423e-06,
+        -0.0002459424949575739
+      ],
+      "minimum_pelvis_height_m": 0.8912534177053786,
+      "max_sole_height_m": [
+        0.05465840556191984,
+        0.054658940660513675
+      ],
+      "off_ground_samples": [
+        157,
+        157
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "backward_25s_then_stop",
+      "passed": true,
+      "requested_seconds": 25,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 28.0,
+        "mode": "walk",
+        "phase": "swing",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          -0.5583935362645056,
+          0.10093480895037518,
+          0.8928269831069741
+        ],
+        "com_xyz": [
+          -0.5464531567241794,
+          0.11125179613058127,
+          1.1459553549867112
+        ],
+        "max_tilt_deg": 0.4582131157379319,
+        "step_count": 7,
+        "distance_m": 1.732834450452038,
+        "foot_normal_N": [
+          1684.171825297429,
+          0.0
+        ],
+        "max_torque_ratio": 0.2706713603362595,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": -0.025,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 0.0033944814818520426
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 36.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          -0.6034321388026629,
+          -0.0009225990412963203,
+          0.8934160613183085
+        ],
+        "com_xyz": [
+          -0.5876014849500533,
+          5.169678693284394e-05,
+          1.1460241564555287
+        ],
+        "max_tilt_deg": 0.4582131157379319,
+        "step_count": 8,
+        "distance_m": 1.8529547858932822,
+        "foot_normal_N": [
+          806.8644278965512,
+          877.1456780293967
+        ],
+        "max_torque_ratio": 0.2706713603362595,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 0.0012235656736272102
+      },
+      "net_pelvis_displacement_m": [
+        -0.6188844338671885,
+        -0.00017459672855410502,
+        -2.1887716216695274e-05
+      ],
+      "minimum_pelvis_height_m": 0.8918797720528314,
+      "max_sole_height_m": [
+        0.05467961846897765,
+        0.05467888499425909
+      ],
+      "off_ground_samples": [
+        104,
+        83
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "left_turn_40s_then_stop",
+      "passed": true,
+      "requested_seconds": 40,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 43.0,
+        "mode": "walk",
+        "phase": "shift",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          -0.04838681313466605,
+          -0.023200185550911828,
+          0.8940121487840295
+        ],
+        "com_xyz": [
+          -0.057070418282580464,
+          -0.008353630132712547,
+          1.1456572572476273
+        ],
+        "max_tilt_deg": 0.5403571511823547,
+        "step_count": 12,
+        "distance_m": 2.447417302981693,
+        "foot_normal_N": [
+          1671.8428394058346,
+          12.158147079256912
+        ],
+        "max_torque_ratio": 0.2733570095555385,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.04,
+        "pelvis_yaw_rad": 1.5149841417755412
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 51.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.037437470526895465,
+          -0.02285088435089128,
+          0.8934867759015483
+        ],
+        "com_xyz": [
+          0.03849206585238565,
+          -0.0072366847150379995,
+          1.1460562139545685
+        ],
+        "max_tilt_deg": 0.5403571511823547,
+        "step_count": 12,
+        "distance_m": 2.7334802005190557,
+        "foot_normal_N": [
+          839.3862698839494,
+          844.6238318571593
+        ],
+        "max_torque_ratio": 0.2733570095555385,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": 1.5149880674637657
+      },
+      "net_pelvis_displacement_m": [
+        0.02198517519169486,
+        -0.022102879683396092,
+        4.882726975841134e-05
+      ],
+      "minimum_pelvis_height_m": 0.8920028908889135,
+      "max_sole_height_m": [
+        0.05466511237952171,
+        0.05465012387565969
+      ],
+      "off_ground_samples": [
+        157,
+        157
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "right_turn_40s_then_stop",
+      "passed": true,
+      "requested_seconds": 40,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 43.0,
+        "mode": "walk",
+        "phase": "shift",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.1333849488488652,
+          0.03607579077246712,
+          0.8940506093447491
+        ],
+        "com_xyz": [
+          0.14539149418386554,
+          0.020642609511965913,
+          1.1454328032781504
+        ],
+        "max_tilt_deg": 0.5414510739526828,
+        "step_count": 12,
+        "distance_m": 2.4484094065702755,
+        "foot_normal_N": [
+          1672.0625137327002,
+          11.975697869264536
+        ],
+        "max_torque_ratio": 0.27287011708296344,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": -0.04,
+        "pelvis_yaw_rad": -1.516095269242363
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 51.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.05063804430640834,
+          0.03732338376189453,
+          0.8933483778471346
+        ],
+        "com_xyz": [
+          0.053515377896020074,
+          0.02198755262947227,
+          1.1459999546931132
+        ],
+        "max_tilt_deg": 0.5414510740900024,
+        "step_count": 12,
+        "distance_m": 2.7309544388503224,
+        "foot_normal_N": [
+          842.8672815442044,
+          841.1428044421974
+        ],
+        "max_torque_ratio": 0.27287011708296344,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -1.5167191793055224
+      },
+      "net_pelvis_displacement_m": [
+        0.03518574803625037,
+        0.03807138898807832,
+        -8.957143609744644e-05
+      ],
+      "minimum_pelvis_height_m": 0.891715873579356,
+      "max_sole_height_m": [
+        0.054650844496469106,
+        0.0546647009608289
+      ],
+      "off_ground_samples": [
+        157,
+        156
+      ],
+      "max_external_wrench_component": 0.0
+    },
+    {
+      "name": "35N_0p12s_push_then_balance",
+      "passed": true,
+      "requested_seconds": 15,
+      "running_state": {
+        "mujoco_version": "3.12.0",
+        "time": 18.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.015458956385449679,
+          -0.0007586061408699162,
+          0.893436314476587
+        ],
+        "com_xyz": [
+          0.031086305875457854,
+          7.145505132228481e-06,
+          1.1460532950984486
+        ],
+        "max_tilt_deg": 0.9447672714879174,
+        "step_count": 0,
+        "distance_m": 0.027005187845090595,
+        "foot_normal_N": [
+          841.9198956896688,
+          842.090211980078
+        ],
+        "max_torque_ratio": 0.14533713825660574,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -2.3571006766500705e-05
+      },
+      "final_state": {
+        "mujoco_version": "3.12.0",
+        "time": 18.0,
+        "mode": "stand",
+        "phase": "stand",
+        "paused": false,
+        "fallen": false,
+        "pelvis_xyz": [
+          0.015458956385449679,
+          -0.0007586061408699162,
+          0.893436314476587
+        ],
+        "com_xyz": [
+          0.031086305875457854,
+          7.145505132228481e-06,
+          1.1460532950984486
+        ],
+        "max_tilt_deg": 0.9447672714879174,
+        "step_count": 0,
+        "distance_m": 0.027005187845090595,
+        "foot_normal_N": [
+          841.9198956896688,
+          842.090211980078
+        ],
+        "max_torque_ratio": 0.14533713825660574,
+        "actuators": 27,
+        "mass_kg": 171.6626,
+        "external_support": false,
+        "forward_command": 0.0,
+        "yaw_command": 0.0,
+        "pelvis_yaw_rad": -2.3571006766500705e-05
+      },
+      "net_pelvis_displacement_m": [
+        6.661735882774675e-06,
+        -1.0601391918247478e-05,
+        -1.634535317540653e-06
+      ],
+      "minimum_pelvis_height_m": 0.893436314476587,
+      "max_sole_height_m": [
+        0.001873773001513368,
+        0.00189305300520555
+      ],
+      "off_ground_samples": [
+        0,
+        0
+      ],
+      "max_external_wrench_component": 35.0
+    },
+    {
+      "name": "pause_reset_floating_base_contract",
+      "passed": true
+    }
+  ]
+}

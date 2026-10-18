@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scenario": "existing virtual environment without pip, including spaces and Chinese path characters",
+  "before": "/tmp/atlas_pip_repair_owl92yor/虚拟环境 测试/bin/python: No module named pip",
+  "repair_command": "<venv-python> -m ensurepip --upgrade --default-pip",
+  "pip_after": "pip 25.0.1 from /tmp/atlas_pip_repair_owl92yor/虚拟环境 测试/lib/python3.12/site-packages/pip (python 3.12)",
+  "existing_files_preserved": true,
+  "platform": "linux",
+  "windows_batch_executed": false,
+  "wall_seconds": 2.012
+}

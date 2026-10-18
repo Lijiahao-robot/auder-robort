@@ -1,0 +1,209 @@
+{
+  "repository": "https://github.com/robfiras/loco-mujoco",
+  "tag": "v0.3.0",
+  "tree_sha": "5fd903cb92170abba7e4d1b02a443e6a86e56cfa",
+  "files": [
+    {
+      "file": "models/meshes/l_clav.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_clav.stl",
+      "git_blob_sha": "5f34d6c82fa3220ca33933e10d20bfb1c11fc9b7",
+      "sha256": "ab9c44c8b774b007dee7115b82c05978263478bc047fcf64376f24dcb4448332",
+      "bytes": 27884
+    },
+    {
+      "file": "models/meshes/l_farm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_farm.stl",
+      "git_blob_sha": "7f03e5b2268d56ea17e8f75e33939a36ab6a7475",
+      "sha256": "cb3a2c85d1d050905a4cb3a3b6a2ec67f93ea5691f45e24106cf9181f37887cd",
+      "bytes": 9884
+    },
+    {
+      "file": "models/meshes/l_foot.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_foot.stl",
+      "git_blob_sha": "bb44f916c88ac762559f41f93b32034cdc0848f5",
+      "sha256": "994721b6c790e290652afd24a33700bf818f1c40ec04d8c053160a9452bf55c3",
+      "bytes": 26884
+    },
+    {
+      "file": "models/meshes/l_hand.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_hand.stl",
+      "git_blob_sha": "739924723361cc18ee6f6b9ac44701a360495287",
+      "sha256": "ad5fb445ab8156348abf9d84a84210da91ca6522e7bb3d1520f5d3334b6fbc92",
+      "bytes": 14684
+    },
+    {
+      "file": "models/meshes/l_larm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_larm.stl",
+      "git_blob_sha": "e7d8f84f84d73fe0b45032d77f5daa64469c3ec4",
+      "sha256": "d461f023c9419663bb2fd685031e413ac73e8bf0b4f345dc3353c801e53023ae",
+      "bytes": 20484
+    },
+    {
+      "file": "models/meshes/l_lglut.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_lglut.stl",
+      "git_blob_sha": "4f5c50a3881b74918a429918467f8527554e6a5e",
+      "sha256": "f2f4f603a7ef179390130d79a89f7e0c941b849ea6c88bcedbed1ec7438fb258",
+      "bytes": 42434
+    },
+    {
+      "file": "models/meshes/l_lleg.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_lleg.stl",
+      "git_blob_sha": "326a3070683819a50e7a0271a670cd7af92992d4",
+      "sha256": "963b5cb8cb9516085dc8474c2b34318a8f50c08e58b21b2f4f2e14eee2c77073",
+      "bytes": 74784
+    },
+    {
+      "file": "models/meshes/l_scap.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_scap.stl",
+      "git_blob_sha": "c13925a8c4031b36fc854c8b2dde5fd3b721a9eb",
+      "sha256": "438720510095775dc86732b626a23452b2e6542cbb691fb35cbad5d70e04f50e",
+      "bytes": 33434
+    },
+    {
+      "file": "models/meshes/l_talus.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_talus.stl",
+      "git_blob_sha": "9f8fecf8db6bf88e653ae912c3bd8465406b1488",
+      "sha256": "ca672783ea4040819110258223fca7de89569ebbf04f9b12e1c3017ff62c7577",
+      "bytes": 2484
+    },
+    {
+      "file": "models/meshes/l_uarm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_uarm.stl",
+      "git_blob_sha": "1c75eab5b7faa14941ca0d60dfb56810146f44b2",
+      "sha256": "f257dc1a62411b688b1036c0acb15dc7c4e06f29c8c31c2caf43e88ff12008a2",
+      "bytes": 27234
+    },
+    {
+      "file": "models/meshes/l_uglut.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_uglut.stl",
+      "git_blob_sha": "079437d0d1d1d869a77ccd199b1ee241a4a022f6",
+      "sha256": "6b95e81bed4d76245560a79528fbc750e8dba490da9a2d8e06732d5c5335f571",
+      "bytes": 24384
+    },
+    {
+      "file": "models/meshes/l_uleg.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/l_uleg.stl",
+      "git_blob_sha": "faa193063a1f60ede8214f81aea3f791a7bbe25b",
+      "sha256": "557f8b25472a12c04dc00cc7a275d938bcfb2abc602200160990f42b285e03a8",
+      "bytes": 123284
+    },
+    {
+      "file": "models/meshes/ltorso.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/ltorso.stl",
+      "git_blob_sha": "b098753c7d0ce0bc0ce6ef2d20132c95a8279b4f",
+      "sha256": "29817deeac328ffccf13a6430469a546d91ca12c8a18764b8469a1befb8ef6cf",
+      "bytes": 12284
+    },
+    {
+      "file": "models/meshes/mtorso.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/mtorso.stl",
+      "git_blob_sha": "4bb6cb416b5dd0bdf13225a47459b6edb6678b17",
+      "sha256": "203bc76b985db4c72ea2f95b0008ef2afa21ac0b726022e155e1a99961c68dfe",
+      "bytes": 4284
+    },
+    {
+      "file": "models/meshes/pelvis.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/pelvis.stl",
+      "git_blob_sha": "f884bc2ce7d1e937e53faeaefaf98088a4037917",
+      "sha256": "a31e95cb6061892cdba2de0473d8843fb6794ab0d21628d535361bacb40308e9",
+      "bytes": 98984
+    },
+    {
+      "file": "models/meshes/r_clav.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_clav.stl",
+      "git_blob_sha": "f93727489b9a9a564c0b1049b4f5120ce91bdafc",
+      "sha256": "a92356d7060c6e0f157198e6ad8c6acd2e14fe00d182fba147bc740d5bbc20d8",
+      "bytes": 27884
+    },
+    {
+      "file": "models/meshes/r_farm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_farm.stl",
+      "git_blob_sha": "d9686a30a26bf6a0847e4dae90366b9427d433f0",
+      "sha256": "0883993f80428cec6de283df011bc7e02757c8f440761449d241f177f3f4841c",
+      "bytes": 9884
+    },
+    {
+      "file": "models/meshes/r_foot.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_foot.stl",
+      "git_blob_sha": "cc8cc8aadf78dd1a7b2d7ef76c49135d59f8cdb7",
+      "sha256": "54a0fbd573f431457cb6cec79a390ef53c66f7b6fee17fabebbcc2b57f370bf9",
+      "bytes": 27084
+    },
+    {
+      "file": "models/meshes/r_hand.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_hand.stl",
+      "git_blob_sha": "5dbd9c86cf50398db07641b042237d26b1388439",
+      "sha256": "7c4311f092b9cb55ae162cac9781c6d34ad50e5f11c77f0bb356db79ae705710",
+      "bytes": 14684
+    },
+    {
+      "file": "models/meshes/r_larm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_larm.stl",
+      "git_blob_sha": "72a332d9a5885f9513a6c562ee037b39cd4f0f60",
+      "sha256": "9d30073b921d6be81571a3e4980f521e7ee098829e1ad8c03e9ac62dd70d198e",
+      "bytes": 20484
+    },
+    {
+      "file": "models/meshes/r_lglut.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_lglut.stl",
+      "git_blob_sha": "bc487601d45eaabceab0e9d6495b38acec82c94a",
+      "sha256": "355cbf8eaef19f3076fc4c8de9966fd111065b14a80d671244f76fb08501466c",
+      "bytes": 42434
+    },
+    {
+      "file": "models/meshes/r_lleg.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_lleg.stl",
+      "git_blob_sha": "ccddf43b72670a5e26feba6b9a56d3832448a29c",
+      "sha256": "8b99f1b9701db997a836f2287c0c5409186428fa3906b2b43de8a224e0cbf885",
+      "bytes": 74784
+    },
+    {
+      "file": "models/meshes/r_scap.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_scap.stl",
+      "git_blob_sha": "3ead0217ebbd58f0d9d8416503e71f9aa360bb3e",
+      "sha256": "5221b3778715a20a0aace21fac862ef561ad20e6220f3b038be6e80231a9445a",
+      "bytes": 33634
+    },
+    {
+      "file": "models/meshes/r_talus.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_talus.stl",
+      "git_blob_sha": "01f76224f7101d4a31fd197eaf5dedbb6ae1c5ce",
+      "sha256": "909a134641784715676a51fc597a1006000edd233357fef3f5acb5ff666f1a2f",
+      "bytes": 2484
+    },
+    {
+      "file": "models/meshes/r_uarm.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_uarm.stl",
+      "git_blob_sha": "8dc6d0fa87cd3e980aa6a3ffa9dd80c65980afa3",
+      "sha256": "82a312e3c521d253815af72af59690c4253618186aeb4f7f94d84b0d942a3ad3",
+      "bytes": 27384
+    },
+    {
+      "file": "models/meshes/r_uglut.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_uglut.stl",
+      "git_blob_sha": "19b39e2743da29495cf7d653098fb57a5fdd1987",
+      "sha256": "491073243aaec7793648c9f0dc7b9f8a11e2c16b813b535dfd070b166b106ae9",
+      "bytes": 24484
+    },
+    {
+      "file": "models/meshes/r_uleg.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/r_uleg.stl",
+      "git_blob_sha": "339ffaf1f43ec09435c90a66656f2c0b080286bd",
+      "sha256": "35542ce595006c5222c7e628290aa2dab025f36cc1540e7bdae897e8c3c3d2ff",
+      "bytes": 123284
+    },
+    {
+      "file": "models/meshes/utorso.stl",
+      "source": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/meshes/utorso.stl",
+      "git_blob_sha": "c1d0f56151c4c7ed69122d542066cf118303233e",
+      "sha256": "674259aea90c8ab6e8c7f78cd6582a34420e978c28b1146024d065d5ab60147b",
+      "bytes": 348284
+    }
+  ],
+  "source_xml": {
+    "local_file": "models/atlas_source.xml",
+    "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco/5fd903cb92170abba7e4d1b02a443e6a86e56cfa/loco_mujoco/environments/data/atlas/atlas.xml",
+    "sha256": "9c70466c1af8f186d24f6abf7800818560ec8868c4fe2b1784dea8f06836faba"
+  },
+  "adapted_xml_sha256": "b9a807ee858f9ef980ed21a120385f80fb9beaf3564430ed2eca497a257d0e96"
+}

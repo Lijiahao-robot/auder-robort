@@ -1,0 +1,33 @@
+{
+  "all_passed": true,
+  "case_count": 5,
+  "checks": [
+    {
+      "name": "compiled_model_and_mesh_contract",
+      "passed": true
+    },
+    {
+      "name": "unicode_spaces_and_unrelated_working_directory",
+      "passed": true
+    },
+    {
+      "name": "actual_entrypoint_walks_from_unicode_path",
+      "passed": true,
+      "simulation_seconds": 15.0,
+      "steps": 4
+    },
+    {
+      "name": "missing_mesh_has_actionable_diagnostic",
+      "passed": true
+    },
+    {
+      "name": "missing_xml_is_reported_cleanly_by_entrypoint",
+      "passed": true
+    }
+  ],
+  "mujoco_version": "3.12.0",
+  "platform": "linux",
+  "windows_native_tested": false,
+  "wall_seconds": 2.254,
+  "method": "Python file reads, in-memory MjVfs; real headless physics from copied Unicode project path."
+}

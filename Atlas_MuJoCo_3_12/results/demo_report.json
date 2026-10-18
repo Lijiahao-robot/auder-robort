@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "error": null,
+  "wall_seconds": 8.777,
+  "model_sha256": "b9a807ee858f9ef980ed21a120385f80fb9beaf3564430ed2eca497a257d0e96",
+  "physics_step_seconds": 0.002,
+  "control_step_seconds": 0.008,
+  "warnings": {},
+  "model_generation": "legacy hydraulic Atlas derivative",
+  "controller": "tutorial weighted inverse dynamics / ground CoP load allocation",
+  "visual_replay": false,
+  "external_base_support": false,
+  "state": {
+    "mujoco_version": "3.12.0",
+    "time": 49.0,
+    "mode": "stand",
+    "phase": "stand",
+    "paused": false,
+    "fallen": false,
+    "pelvis_xyz": [
+      0.36227729151362176,
+      -0.0007497884393691213,
+      0.8932085672350607
+    ],
+    "com_xyz": [
+      0.3774521819527609,
+      4.508057694321635e-05,
+      1.1458187117015666
+    ],
+    "max_tilt_deg": 13.060572379136225,
+    "step_count": 4,
+    "distance_m": 2.515716482454735,
+    "foot_normal_N": [
+      879.3401055744506,
+      804.6700023209917
+    ],
+    "max_torque_ratio": 1.0,
+    "actuators": 27,
+    "mass_kg": 171.6626,
+    "external_support": false,
+    "forward_command": 0.0,
+    "yaw_command": 0.0,
+    "pelvis_yaw_rad": -0.0018205080132012229
+  },
+  "events": [
+    {
+      "time": 0.0,
+      "event": "demo: stand"
+    },
+    {
+      "time": 3.002,
+      "event": "demo: wave"
+    },
+    {
+      "time": 10.0,
+      "event": "demo: squat"
+    },
+    {
+      "time": 20.002,
+      "event": "demo: dance"
+    },
+    {
+      "time": 30.002,
+      "event": "demo: walk"
+    },
+    {
+      "time": 42.0,
+      "event": "demo: stand"
+    }
+  ]
+}

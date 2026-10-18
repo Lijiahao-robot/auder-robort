@@ -1,0 +1,17 @@
+Model source:
+https://github.com/robfiras/loco-mujoco/tree/v0.3.0/loco_mujoco/environments/data/atlas
+
+The historical XML identifies:
+  Atlas_V6 modified by Guoping Zhao.
+  Atlas(v5), Boston Dynamics; OSRF DRCsim; downloaded July 27, 2015.
+  Author: Vikash Kumar; Copyright 2009-2016 Roboti LLC.
+The original attribution header remains in models/atlas_source.xml and models/atlas.xml.
+The LocoMuJoCo repository license is copied in LOCO_MUJOCO_LICENSE.txt.
+
+This independent tutorial modifies compiler settings, floating-base representation,
+ankle roll joints, motor scaling, foot collision geometry, lighting and colors.
+The Python controller is newly written for this tutorial. Boston Dynamics has not
+provided this controller. The supplied model represents a historical hydraulic
+Atlas, not the current electric Atlas.
+
+Full upstream source and mesh hashes are in model_provenance.json.

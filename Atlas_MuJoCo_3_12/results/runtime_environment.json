@@ -1,0 +1,33 @@
+{
+  "engine": "3.12.0",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "platform": "linux",
+  "physics_validation": "headless Linux, 10 checks passed",
+  "graphics_validation": "actual MuJoCo EGL offscreen rendering",
+  "windows_native_gui_tested": false,
+  "source_sha256": {
+    "run_atlas.py": "6e77b94cb3c70df0313e94e422952bcf540e8cc1c0c7fdd14d34ef087cb5660d",
+    "verify_simulation.py": "d6e27089306209d681330a90d74bd58ff74bfe140c8d67eb55edd23e1403b06e",
+    "atlas_sim/simulation.py": "20c7b40c61f3285a1523e2dca75bba688cf9a2cdc54c3eee91a2e69f5050ada6",
+    "build_model.py": "a00a80068767788026d4b3fbaa00b645ba1a57a3831d2c850b66089b00994c6f",
+    "atlas_sim/model_loader.py": "bdb4353a3ba3b2ee536bbc11c2a31aea0811c72296af5e90b714bedccf1b1e02",
+    "verify_model_loading.py": "d9d3702dd61cde53cdd016c4609b3aa42c3ac5486a01ee9f37bc740a26cea268"
+  },
+  "installer_fix": {
+    "description": "Bootstrap pip in an existing incomplete venv before dependency installation; launchers verify imports before starting.",
+    "batch_sha256": {
+      "2_启动Atlas.bat": "6d8513a59cf154790a371e5a52c9bd63f29d11079b2072a43f8eec7a8c9f0a10",
+      "4_无窗口自检.bat": "4d09ae814aa2bd09bb2395319f722013f70849e6b6ff19429524ba8625eacfa4",
+      "3_自动演示.bat": "5060e60778a0378939372dbbf4a550819a6919022365b27387a89a2024b11f36",
+      "1_安装依赖.bat": "1bbf49c8889a05e76a939b165155c83f640ed39922a5aee4981f178fda6bfcd1"
+    },
+    "verification": "results/pip_repair_verification.json"
+  },
+  "model_loading_fix": {
+    "method": "Python UTF-8 XML and binary mesh reads; MuJoCo MjVfs in-memory compilation",
+    "verification": "results/model_loading_verification.json",
+    "compiled_geometry_and_dynamics_equivalence_checked": true,
+    "windows_native_tested": false
+  }
+}
