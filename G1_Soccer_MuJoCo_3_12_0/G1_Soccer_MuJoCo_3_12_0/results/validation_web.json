@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "checks": {
+    "page_and_keyboard_served": true,
+    "actual_mujoco_jpeg": true,
+    "mjpeg_stream": true,
+    "walk_and_heartbeat_timeout": true,
+    "pause_freezes_physics": true,
+    "combined_strafe_turn_and_stop": true,
+    "stale_sequence_rejected": true,
+    "invalid_input_and_foreign_origin_rejected": true,
+    "web_kick_physical_contact_and_goal": true
+  },
+  "goal_state": {
+    "time": 2.76,
+    "robot": [
+      -1.6,
+      0.0,
+      0.0
+    ],
+    "ball": [
+      4.484917568101419,
+      -0.11779129660287514,
+      0.11925600293543558
+    ],
+    "ball_speed": 0.78,
+    "speed": 0.0,
+    "goals": 1,
+    "shots": 1,
+    "phase": "站立",
+    "paused": false,
+    "ready_to_kick": false,
+    "contact_count": 1,
+    "event": "进球！按 B 把球放回脚前",
+    "error": null,
+    "mujoco_version": "3.12.0",
+    "assisted_base": true,
+    "command_timeout": true,
+    "render_fps": 2.2,
+    "demo": false,
+    "camera": "field",
+    "frame_id": 12
+  },
+  "browser_visual_test": "not_run",
+  "windows_test": "not_run"
+}

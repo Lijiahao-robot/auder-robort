@@ -1,0 +1,114 @@
+{
+  "right_foot": {
+    "passed": true,
+    "left_foot": false,
+    "foot_contacts_enabled": true,
+    "ball_horizontal_displacement_m": 5.313293164550379,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 8.699999999999575,
+      "goals": 1,
+      "shots": 1,
+      "foot_ball_contact_steps": 11,
+      "contact_episodes": 1,
+      "max_ball_speed_m_s": 5.0679776985582645,
+      "ball_position_m": [
+        4.083276354564764,
+        -0.10663465373595032,
+        0.10499248977030995
+      ],
+      "robot_travel_m": 0.0,
+      "max_joint_limit_violation_rad": 0.0,
+      "max_root_tracking_error_m": 0.004613511509053284,
+      "max_kick_foot_tracking_error_m": 0.10738895824827649,
+      "error": null,
+      "assisted_pelvis": true,
+      "physical_ball_contact": true,
+      "limitations": [
+        "Mocap/weld assisted pelvis; no autonomous balance.",
+        "Prescribed foot trajectories, IK, torque-limited PD.",
+        "Only sole pads collide on the robot; no full self-collision model.",
+        "No SDK/DDS/ROS or hardware commands."
+      ]
+    }
+  },
+  "left_foot": {
+    "passed": true,
+    "left_foot": true,
+    "foot_contacts_enabled": true,
+    "ball_horizontal_displacement_m": 5.312845529068536,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 8.699999999999575,
+      "goals": 1,
+      "shots": 1,
+      "foot_ball_contact_steps": 11,
+      "contact_episodes": 1,
+      "max_ball_speed_m_s": 5.067983366997635,
+      "ball_position_m": [
+        4.0828286676751775,
+        0.10661479651500673,
+        0.10499248977030995
+      ],
+      "robot_travel_m": 0.0,
+      "max_joint_limit_violation_rad": 0.0,
+      "max_root_tracking_error_m": 0.004613510336847196,
+      "max_kick_foot_tracking_error_m": 0.10738901792413559,
+      "error": null,
+      "assisted_pelvis": true,
+      "physical_ball_contact": true,
+      "limitations": [
+        "Mocap/weld assisted pelvis; no autonomous balance.",
+        "Prescribed foot trajectories, IK, torque-limited PD.",
+        "Only sole pads collide on the robot; no full self-collision model.",
+        "No SDK/DDS/ROS or hardware commands."
+      ]
+    }
+  },
+  "negative_no_foot_contact": {
+    "passed": true,
+    "left_foot": false,
+    "foot_contacts_enabled": false,
+    "ball_horizontal_displacement_m": 0.0,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 8.699999999999575,
+      "goals": 0,
+      "shots": 1,
+      "foot_ball_contact_steps": 0,
+      "contact_episodes": 0,
+      "max_ball_speed_m_s": 0.019620000000000002,
+      "ball_position_m": [
+        -1.23,
+        -0.12,
+        0.10499248977040586
+      ],
+      "robot_travel_m": 0.0,
+      "max_joint_limit_violation_rad": 0.0,
+      "max_root_tracking_error_m": 0.0045888467813441705,
+      "max_kick_foot_tracking_error_m": 0.11418299747406846,
+      "error": null,
+      "assisted_pelvis": true,
+      "physical_ball_contact": true,
+      "limitations": [
+        "Mocap/weld assisted pelvis; no autonomous balance.",
+        "Prescribed foot trajectories, IK, torque-limited PD.",
+        "Only sole pads collide on the robot; no full self-collision model.",
+        "No SDK/DDS/ROS or hardware commands."
+      ]
+    }
+  },
+  "scoring": {
+    "passed": true,
+    "checks": [
+      "outside posts rejected",
+      "above crossbar rejected",
+      "crossing-point interpolation",
+      "below floor rejected",
+      "whole ball crosses line",
+      "no repeated scoring",
+      "both goal directions"
+    ]
+  },
+  "success": true
+}

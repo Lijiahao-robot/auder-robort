@@ -1,0 +1,1 @@
+{"name":"g1-soccer-web","private":true,"type":"module","scripts":{"test":"node tools/verify-input.mjs"}}

@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "runtime": "Node.js",
+  "checks": [
+    "alias key release",
+    "multiple pointer sources",
+    "combined directions",
+    "boost",
+    "clear all inputs",
+    "action mapping"
+  ],
+  "browser_visual_test": "not_run"
+}

@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/unitreerobotics/unitree_mujoco",
+  "commit": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+  "model": "unitree_robots/g1/g1_29dof.xml",
+  "mesh_files": 36
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101b17"><title>G1 Football · 键盘足球训练场</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="G1 Football 首页"><span class="brand-mark">G<span>1</span></span><span>FOOTBALL<small>人形机器人足球训练场</small></span></a>
+    <div class="top-meta"><span class="engine">MuJoCo <b>3.12.0</b></span><span class="connection" id="connection"><i></i><span>正在连接</span></span></div>
+  </header>
+  <main>
+    <div class="page-title"><div><p class="eyebrow">INTERACTIVE TRAINING / 01</p><h1>脚下见真章<span class="title-dot">.</span></h1><p>走位、瞄准、射门。用键盘，踢出你的第一球。</p></div><button class="button demo-button" data-action="demo"><span>▷</span> 演示一次射门</button></div>
+    <section class="workspace" aria-label="足球仿真控制台">
+      <div class="left-column">
+        <section class="scene-panel">
+          <div class="scene-toolbar"><div><span class="live-dot"></span><b>实时训练场</b><span class="toolbar-divider"></span><span id="phase">站立</span></div><div class="camera-tabs" aria-label="相机视角"><button class="selected" data-camera="field" aria-pressed="true">全场</button><button data-camera="follow" aria-pressed="false">跟随</button><button data-camera="behind" aria-pressed="false">后方</button></div></div>
+          <div class="viewport" id="viewport">
+            <img id="stream" src="/stream.mjpg" alt="MuJoCo 实时渲染的 G1 足球场" draggable="false" width="960" height="540">
+            <div id="loading" class="loading"><span class="spinner"></span><b>正在连接训练场</b><small>等待 MuJoCo 实时画面…</small></div>
+            <div class="view-label"><span>G1 · 29 DOF</span><small>辅助底座 · 物理足球</small></div>
+            <div class="goal-celebration" id="celebration" hidden><span>GOAL!</span><b>漂亮的进球</b></div>
+            <div class="pitch-hud"><span id="time">00:00</span><span id="fps">— FPS</span></div>
+          </div>
+          <div class="scene-footer"><div><span class="event-dot"></span><span id="event" role="status">准备就绪，WASD 走位，空格踢球</span></div><button id="fullscreen" title="全屏显示" aria-label="全屏显示">⛶</button></div>
+        </section>
+        <div class="metrics" aria-label="训练数据">
+          <article><span>进球数 <small>GOALS</small></span><div><b id="goals">00</b><em class="metric-accent">⚽</em></div></article>
+          <article><span>射门次数 <small>SHOTS</small></span><div><b id="shots">00</b><em>次</em></div></article>
+          <article><span>行走速度 <small>VELOCITY</small></span><div><b id="speed">0.00</b><em>m/s</em></div></article>
+          <article><span>足球速度 <small>BALL SPEED</small></span><div><b id="ball-speed">0.00</b><em>m/s</em></div></article>
+        </div>
+        <section class="training-note"><span class="note-icon">↗</span><p><b>从一次射门开始</b>先点「演示一次射门」观看走位，再按 <kbd>B</kbd> 将足球放到脚前，用 <kbd>Space</kbd> 射门。</p></section>
+      </div>
+      <aside class="control-panel" aria-label="屏幕键盘">
+        <div class="panel-heading"><div><p class="eyebrow">KEYBOARD CONTROL</p><h2>你的控制台</h2></div><span class="keyboard-icon">⌨</span></div>
+        <p class="control-copy">按住键盘，或按住下面的按键。<br>松开即减速停止，支持同时按键。</p>
+        <div class="keyboard" role="group" aria-label="走位键盘">
+          <button class="key small-key turn" data-code="KeyQ" aria-label="Q 向左转" aria-pressed="false"><span>Q</span><small>↶ 左转</small></button>
+          <button class="key primary-key" data-code="KeyW" aria-label="W 前进" aria-pressed="false"><span>W</span><small>↑ 前进</small></button>
+          <button class="key small-key turn" data-code="KeyE" aria-label="E 向右转" aria-pressed="false"><span>E</span><small>右转 ↷</small></button>
+          <button class="key" data-code="KeyA" aria-label="A 向左横移" aria-pressed="false"><span>A</span><small>← 左移</small></button>
+          <button class="key" data-code="KeyS" aria-label="S 后退" aria-pressed="false"><span>S</span><small>↓ 后退</small></button>
+          <button class="key" data-code="KeyD" aria-label="D 向右横移" aria-pressed="false"><span>D</span><small>右移 →</small></button>
+        </div>
+        <button class="boost-key key" data-code="ShiftLeft" aria-label="按住 Shift 加速" aria-pressed="false"><span>Shift</span><small>按住加速</small><b>⇧</b></button>
+        <button class="kick-button" data-action="kick"><span class="kick-icon">⚽</span><span>射门<small>SPACE / K</small></span><span>↗</span></button>
+        <div class="kick-status" id="kick-status"><i></i><span>靠近足球，准备射门</span></div>
+        <div class="aux-controls"><button data-action="pause" id="pause"><span>Ⅱ</span><b>暂停</b><kbd>P</kbd></button><button data-action="stop"><span>■</span><b>停止</b><kbd>X</kbd></button><button data-action="ball"><span>↺</span><b>球复位</b><kbd>B</kbd></button><button data-action="reset"><span>⟲</span><b>全部复位</b><kbd>R</kbd></button></div>
+        <div class="arrows-hint"><span>也可使用方向键</span><div><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd></div><small>上下走位 · 左右转向</small></div>
+      </aside>
+    </section>
+    <footer><span><i></i> 本机 MuJoCo 实时仿真</span><span>虚拟底座辅助 + 足端轨迹控制 · 无真机连接</span><span>G1 FOOTBALL LAB</span></footer>
+  </main>
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
