@@ -1,0 +1,502 @@
+<mujoco model="dual_dexterous_cube_assisted">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep=".002" integrator="implicitfast" gravity="0 0 -9.81" iterations="80" cone="elliptic" />
+  <default>
+    <joint damping=".015" armature=".000025" />
+    <geom solref=".008 1" solimp=".95 .99 .001" friction="1.0 .004 .0001" margin=".00015" />
+    <position kp="1.6" kv=".035" forcerange="-.35 .35" ctrllimited="true" />
+  </default>
+  <visual>
+    <global offwidth="1280" offheight="720" />
+    <headlight ambient=".5 .5 .5" diffuse=".7 .7 .7" />
+    <quality shadowsize="2048" />
+  </visual>
+  <statistic center="0 0 .15" extent=".32" />
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1=".08 .12 .19" rgb2=".43 .49 .56" width="256" height="1536" />
+    <material name="table_mat" rgba=".12 .16 .22 1" specular=".35" shininess=".45" />
+  </asset>
+  <worldbody>
+    <light pos="-.2 -.3 .8" dir=".2 .3 -1" directional="true" />
+    <light pos=".3 .3 .6" dir="-.3 -.3 -1" diffuse=".4 .4 .4" castshadow="false" />
+    <geom name="table" type="box" pos="0 0 -.012" size=".32 .25 .012" material="table_mat" contype="4" conaffinity="3" />
+    <geom name="catch_tray" type="cylinder" pos="0 0 .018" size=".063 .018" rgba=".17 .22 .29 1" contype="4" conaffinity="3" />
+    <body name="left_hand" pos="-0.078 0 0.159" quat="1 0 0 0">
+      <joint name="left_retract" type="slide" axis="-1 0 0" range="0 .032" damping="2" armature=".001" />
+      <geom name="left_palm" type="box" size=".009 .040 .034" mass=".17" rgba=".38 .62 .85 1" contype="2" conaffinity="1" />
+      <geom type="cylinder" pos="0 0 -.058" size=".018 .024" rgba=".22 .28 .35 1" contype="0" conaffinity="0" />
+      <body name="left_index_spread" pos="0.008 -0.028 0.034">
+        <joint name="left_index_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="left_index_link_1">
+          <joint name="left_index_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="left_index_end_1" pos="0 0 0.025">
+            <body name="left_index_link_2">
+              <joint name="left_index_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="left_index_end_2" pos="0 0 0.02">
+                <body name="left_index_link_3">
+                  <joint name="left_index_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="left_index_end_3" pos="0 0 0.016">
+                    <geom name="left_index_pad" type="sphere" size=".006" mass=".003" rgba=".38 .62 .85 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="left_index_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="left_middle_spread" pos="0.008 -0.009 0.034">
+        <joint name="left_middle_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="left_middle_link_1">
+          <joint name="left_middle_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="left_middle_end_1" pos="0 0 0.025">
+            <body name="left_middle_link_2">
+              <joint name="left_middle_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="left_middle_end_2" pos="0 0 0.02">
+                <body name="left_middle_link_3">
+                  <joint name="left_middle_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="left_middle_end_3" pos="0 0 0.016">
+                    <geom name="left_middle_pad" type="sphere" size=".006" mass=".003" rgba=".38 .62 .85 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="left_middle_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="left_ring_spread" pos="0.008 0.01 0.034">
+        <joint name="left_ring_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="left_ring_link_1">
+          <joint name="left_ring_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="left_ring_end_1" pos="0 0 0.025">
+            <body name="left_ring_link_2">
+              <joint name="left_ring_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="left_ring_end_2" pos="0 0 0.02">
+                <body name="left_ring_link_3">
+                  <joint name="left_ring_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="left_ring_end_3" pos="0 0 0.016">
+                    <geom name="left_ring_pad" type="sphere" size=".006" mass=".003" rgba=".38 .62 .85 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="left_ring_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="left_little_spread" pos="0.008 0.029 0.034">
+        <joint name="left_little_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="left_little_link_1">
+          <joint name="left_little_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="left_little_end_1" pos="0 0 0.025">
+            <body name="left_little_link_2">
+              <joint name="left_little_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="left_little_end_2" pos="0 0 0.02">
+                <body name="left_little_link_3">
+                  <joint name="left_little_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="left_little_end_3" pos="0 0 0.016">
+                    <geom name="left_little_pad" type="sphere" size=".006" mass=".003" rgba=".38 .62 .85 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="left_little_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="left_thumb_spread" pos="0.008 -0.048 -0.016" quat=".9004471 0 .4349655 0">
+        <joint name="left_thumb_0" axis="1 0 0" range="-0.8 0.8" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="left_thumb_link_1">
+          <joint name="left_thumb_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.029" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="left_thumb_end_1" pos="0 0 0.029">
+            <body name="left_thumb_link_2">
+              <joint name="left_thumb_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.022" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="left_thumb_end_2" pos="0 0 0.022">
+                <body name="left_thumb_link_3">
+                  <joint name="left_thumb_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.017" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="left_thumb_end_3" pos="0 0 0.017">
+                    <geom name="left_thumb_pad" type="sphere" size=".006" mass=".003" rgba=".38 .62 .85 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="left_thumb_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <geom type="box" pos="-0.078 0 0.04" size=".025 .030 .040" rgba=".17 .22 .29 1" contype="0" conaffinity="0" />
+    <body name="right_hand" pos="0.078 0 0.159" quat="0 0 0 1">
+      <joint name="right_retract" type="slide" axis="-1 0 0" range="0 .032" damping="2" armature=".001" />
+      <geom name="right_palm" type="box" size=".009 .040 .034" mass=".17" rgba=".90 .57 .31 1" contype="2" conaffinity="1" />
+      <geom type="cylinder" pos="0 0 -.058" size=".018 .024" rgba=".22 .28 .35 1" contype="0" conaffinity="0" />
+      <body name="right_index_spread" pos="0.008 -0.028 0.034">
+        <joint name="right_index_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="right_index_link_1">
+          <joint name="right_index_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="right_index_end_1" pos="0 0 0.025">
+            <body name="right_index_link_2">
+              <joint name="right_index_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="right_index_end_2" pos="0 0 0.02">
+                <body name="right_index_link_3">
+                  <joint name="right_index_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="right_index_end_3" pos="0 0 0.016">
+                    <geom name="right_index_pad" type="sphere" size=".006" mass=".003" rgba=".90 .57 .31 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="right_index_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="right_middle_spread" pos="0.008 -0.009 0.034">
+        <joint name="right_middle_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="right_middle_link_1">
+          <joint name="right_middle_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="right_middle_end_1" pos="0 0 0.025">
+            <body name="right_middle_link_2">
+              <joint name="right_middle_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="right_middle_end_2" pos="0 0 0.02">
+                <body name="right_middle_link_3">
+                  <joint name="right_middle_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="right_middle_end_3" pos="0 0 0.016">
+                    <geom name="right_middle_pad" type="sphere" size=".006" mass=".003" rgba=".90 .57 .31 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="right_middle_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="right_ring_spread" pos="0.008 0.01 0.034">
+        <joint name="right_ring_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="right_ring_link_1">
+          <joint name="right_ring_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="right_ring_end_1" pos="0 0 0.025">
+            <body name="right_ring_link_2">
+              <joint name="right_ring_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="right_ring_end_2" pos="0 0 0.02">
+                <body name="right_ring_link_3">
+                  <joint name="right_ring_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="right_ring_end_3" pos="0 0 0.016">
+                    <geom name="right_ring_pad" type="sphere" size=".006" mass=".003" rgba=".90 .57 .31 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="right_ring_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="right_little_spread" pos="0.008 0.029 0.034">
+        <joint name="right_little_0" axis="1 0 0" range="-0.45 0.45" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="right_little_link_1">
+          <joint name="right_little_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.025" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="right_little_end_1" pos="0 0 0.025">
+            <body name="right_little_link_2">
+              <joint name="right_little_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.02" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="right_little_end_2" pos="0 0 0.02">
+                <body name="right_little_link_3">
+                  <joint name="right_little_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.016" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="right_little_end_3" pos="0 0 0.016">
+                    <geom name="right_little_pad" type="sphere" size=".006" mass=".003" rgba=".90 .57 .31 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="right_little_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="right_thumb_spread" pos="0.008 -0.048 -0.016" quat=".9004471 0 .4349655 0">
+        <joint name="right_thumb_0" axis="1 0 0" range="-0.8 0.8" />
+        <geom type="sphere" size=".005" mass=".004" rgba=".10 .15 .21 1" contype="0" conaffinity="0" />
+        <body name="right_thumb_link_1">
+          <joint name="right_thumb_1" axis="0 1 0" range="-.40 1.8" />
+          <geom type="capsule" fromto="0 0 0 0 0 0.029" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+          <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+          <body name="right_thumb_end_1" pos="0 0 0.029">
+            <body name="right_thumb_link_2">
+              <joint name="right_thumb_2" axis="0 1 0" range="-.40 1.8" />
+              <geom type="capsule" fromto="0 0 0 0 0 0.022" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+              <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+              <body name="right_thumb_end_2" pos="0 0 0.022">
+                <body name="right_thumb_link_3">
+                  <joint name="right_thumb_3" axis="0 1 0" range="-.40 1.8" />
+                  <geom type="capsule" fromto="0 0 0 0 0 0.017" size=".0042" mass=".009" rgba=".72 .77 .79 1" contype="2" conaffinity="1" />
+                  <geom type="sphere" size=".0048" mass=".001" rgba=".08 .13 .19 1" contype="0" conaffinity="0" />
+                  <body name="right_thumb_end_3" pos="0 0 0.017">
+                    <geom name="right_thumb_pad" type="sphere" size=".006" mass=".003" rgba=".90 .57 .31 1" contype="2" conaffinity="1" friction="1.3 .004 .0001" />
+                    <site name="right_thumb_tip" size=".0015" rgba="0 0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <geom type="box" pos="0.078 0 0.04" size=".025 .030 .040" rgba=".17 .22 .29 1" contype="0" conaffinity="0" />
+    <body name="grasp_anchor" mocap="true" pos="0 0 0.205">
+      <site name="anchor_frame" size=".001" rgba="0 0 0 0" />
+    </body>
+    <body name="cube_core" pos="0 0 0.205">
+      <freejoint name="cube_free" />
+      <inertial pos="0 0 0" mass=".015" diaginertia=".000004 .000004 .000004" />
+      <site name="cube_frame" size=".001" rgba="0 0 0 0" />
+      <body name="layer_pivot">
+        <joint name="layer_turn" type="hinge" axis="0 0 1" limited="false" damping=".003" armature=".00002" />
+        <inertial pos="0 0 0" mass=".001" diaginertia=".0000001 .0000001 .0000001" />
+      </body>
+      <body name="piece_000" pos="-0.022 -0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_000_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_000_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+        <geom name="piece_000_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+        <geom name="piece_000_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_001" pos="-0.022 -0.022 0" quat="1 0 0 0">
+        <geom name="piece_001_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_001_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+        <geom name="piece_001_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_002" pos="-0.022 -0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_002_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_002_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_002_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+        <geom name="piece_002_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_010" pos="-0.022 0 -0.022" quat="1 0 0 0">
+        <geom name="piece_010_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_010_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+        <geom name="piece_010_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_011" pos="-0.022 0 0" quat="1 0 0 0">
+        <geom name="piece_011_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_011_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_012" pos="-0.022 0 0.022" quat="1 0 0 0">
+        <geom name="piece_012_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_012_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_012_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_020" pos="-0.022 0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_020_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_020_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+        <geom name="piece_020_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_020_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_021" pos="-0.022 0.022 0" quat="1 0 0 0">
+        <geom name="piece_021_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_021_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_021_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_022" pos="-0.022 0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_022_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_022_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_022_L" type="box" size="0.00025 0.009 0.009" pos="-0.01087 0 0" mass="0" rgba="0.937254902 0.5882352941 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_022_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_100" pos="0 -0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_100_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_100_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+        <geom name="piece_100_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_101" pos="0 -0.022 0" quat="1 0 0 0">
+        <geom name="piece_101_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_101_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_102" pos="0 -0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_102_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_102_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_102_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_110" pos="0 0 -0.022" quat="1 0 0 0">
+        <geom name="piece_110_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_110_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_112" pos="0 0 0.022" quat="1 0 0 0">
+        <geom name="piece_112_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_112_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_120" pos="0 0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_120_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_120_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+        <geom name="piece_120_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_121" pos="0 0.022 0" quat="1 0 0 0">
+        <geom name="piece_121_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_121_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_122" pos="0 0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_122_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_122_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_122_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_200" pos="0.022 -0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_200_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_200_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_200_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+        <geom name="piece_200_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_201" pos="0.022 -0.022 0" quat="1 0 0 0">
+        <geom name="piece_201_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_201_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_201_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_202" pos="0.022 -0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_202_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_202_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_202_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_202_F" type="box" size="0.009 0.00025 0.009" pos="0 -0.01087 0" mass="0" rgba="0.2235294118 0.7254901961 0.4823529412 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_210" pos="0.022 0 -0.022" quat="1 0 0 0">
+        <geom name="piece_210_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_210_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_210_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_211" pos="0.022 0 0" quat="1 0 0 0">
+        <geom name="piece_211_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_211_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_212" pos="0.022 0 0.022" quat="1 0 0 0">
+        <geom name="piece_212_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_212_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_212_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_220" pos="0.022 0.022 -0.022" quat="1 0 0 0">
+        <geom name="piece_220_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_220_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_220_D" type="box" size="0.009 0.009 0.00025" pos="0 0 -0.01087" mass="0" rgba="0.937254902 0.7921568627 0.2784313725 1" contype="0" conaffinity="0" />
+        <geom name="piece_220_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_221" pos="0.022 0.022 0" quat="1 0 0 0">
+        <geom name="piece_221_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_221_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_221_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+      <body name="piece_222" pos="0.022 0.022 0.022" quat="1 0 0 0">
+        <geom name="piece_222_plastic" type="box" size="0.0106 0.0106 0.0106" mass=".006" rgba=".055 .065 .075 1" contype="1" conaffinity="6" />
+        <geom name="piece_222_U" type="box" size="0.009 0.009 0.00025" pos="0 0 0.01087" mass="0" rgba="0.9568627451 0.9450980392 0.8666666667 1" contype="0" conaffinity="0" />
+        <geom name="piece_222_R" type="box" size="0.00025 0.009 0.009" pos="0.01087 0 0" mass="0" rgba="0.9137254902 0.337254902 0.262745098 1" contype="0" conaffinity="0" />
+        <geom name="piece_222_B" type="box" size="0.009 0.00025 0.009" pos="0 0.01087 0" mass="0" rgba="0.2666666667 0.5333333333 0.862745098 1" contype="0" conaffinity="0" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="left_retract" joint="left_retract" kp="300" kv="8" ctrlrange="0 .03" forcerange="-12 12" />
+    <position name="left_index_0" joint="left_index_0" ctrlrange="-0.45 0.45" />
+    <position name="left_index_1" joint="left_index_1" ctrlrange="-.40 1.8" />
+    <position name="left_index_2" joint="left_index_2" ctrlrange="-.40 1.8" />
+    <position name="left_index_3" joint="left_index_3" ctrlrange="-.40 1.8" />
+    <position name="left_middle_0" joint="left_middle_0" ctrlrange="-0.45 0.45" />
+    <position name="left_middle_1" joint="left_middle_1" ctrlrange="-.40 1.8" />
+    <position name="left_middle_2" joint="left_middle_2" ctrlrange="-.40 1.8" />
+    <position name="left_middle_3" joint="left_middle_3" ctrlrange="-.40 1.8" />
+    <position name="left_ring_0" joint="left_ring_0" ctrlrange="-0.45 0.45" />
+    <position name="left_ring_1" joint="left_ring_1" ctrlrange="-.40 1.8" />
+    <position name="left_ring_2" joint="left_ring_2" ctrlrange="-.40 1.8" />
+    <position name="left_ring_3" joint="left_ring_3" ctrlrange="-.40 1.8" />
+    <position name="left_little_0" joint="left_little_0" ctrlrange="-0.45 0.45" />
+    <position name="left_little_1" joint="left_little_1" ctrlrange="-.40 1.8" />
+    <position name="left_little_2" joint="left_little_2" ctrlrange="-.40 1.8" />
+    <position name="left_little_3" joint="left_little_3" ctrlrange="-.40 1.8" />
+    <position name="left_thumb_0" joint="left_thumb_0" ctrlrange="-0.8 0.8" />
+    <position name="left_thumb_1" joint="left_thumb_1" ctrlrange="-.40 1.8" />
+    <position name="left_thumb_2" joint="left_thumb_2" ctrlrange="-.40 1.8" />
+    <position name="left_thumb_3" joint="left_thumb_3" ctrlrange="-.40 1.8" />
+    <position name="right_retract" joint="right_retract" kp="300" kv="8" ctrlrange="0 .03" forcerange="-12 12" />
+    <position name="right_index_0" joint="right_index_0" ctrlrange="-0.45 0.45" />
+    <position name="right_index_1" joint="right_index_1" ctrlrange="-.40 1.8" />
+    <position name="right_index_2" joint="right_index_2" ctrlrange="-.40 1.8" />
+    <position name="right_index_3" joint="right_index_3" ctrlrange="-.40 1.8" />
+    <position name="right_middle_0" joint="right_middle_0" ctrlrange="-0.45 0.45" />
+    <position name="right_middle_1" joint="right_middle_1" ctrlrange="-.40 1.8" />
+    <position name="right_middle_2" joint="right_middle_2" ctrlrange="-.40 1.8" />
+    <position name="right_middle_3" joint="right_middle_3" ctrlrange="-.40 1.8" />
+    <position name="right_ring_0" joint="right_ring_0" ctrlrange="-0.45 0.45" />
+    <position name="right_ring_1" joint="right_ring_1" ctrlrange="-.40 1.8" />
+    <position name="right_ring_2" joint="right_ring_2" ctrlrange="-.40 1.8" />
+    <position name="right_ring_3" joint="right_ring_3" ctrlrange="-.40 1.8" />
+    <position name="right_little_0" joint="right_little_0" ctrlrange="-0.45 0.45" />
+    <position name="right_little_1" joint="right_little_1" ctrlrange="-.40 1.8" />
+    <position name="right_little_2" joint="right_little_2" ctrlrange="-.40 1.8" />
+    <position name="right_little_3" joint="right_little_3" ctrlrange="-.40 1.8" />
+    <position name="right_thumb_0" joint="right_thumb_0" ctrlrange="-0.8 0.8" />
+    <position name="right_thumb_1" joint="right_thumb_1" ctrlrange="-.40 1.8" />
+    <position name="right_thumb_2" joint="right_thumb_2" ctrlrange="-.40 1.8" />
+    <position name="right_thumb_3" joint="right_thumb_3" ctrlrange="-.40 1.8" />
+    <position name="layer_motor" joint="layer_turn" kp=".8" kv=".025" ctrllimited="false" forcerange="-.6 .6" />
+  </actuator>
+  <equality>
+    <weld name="assisted_grasp" site1="anchor_frame" site2="cube_frame" active="false" solref=".006 1" />
+  </equality>
+  <keyframe>
+    <key name="grasp_ready" qpos="0 -0.04648148973 0.01114814901 1.252905904 0.9143860089 0 0.05052693598 1.317685353 0.9595195231 0 0.1080918695 1.375985413 0.9921763756 0.1922486979 0.1831728375 1.412262605 1.028039949 -0.1649461015 0.235007182 -0.1844291703 -0.2075718472 0 -0.04648148973 0.01114814901 1.252905904 0.9143860089 0 0.05052693598 1.317685353 0.9595195231 0 0.1080918695 1.375985413 0.9921763756 0.1922486979 0.1831728375 1.412262605 1.028039949 -0.1649461015 0.235007182 -0.1844291703 -0.2075718472 0 0 0.205 1 0 0 0 0" ctrl="0 -0.04648148973 0.01114814901 1.252905904 0.9143860089 0 0.05052693598 1.317685353 0.9595195231 0 0.1080918695 1.375985413 0.9921763756 0.1922486979 0.1831728375 1.412262605 1.028039949 -0.1649461015 0.235007182 -0.1844291703 -0.2075718472 0 -0.04648148973 0.01114814901 1.252905904 0.9143860089 0 0.05052693598 1.317685353 0.9595195231 0 0.1080918695 1.375985413 0.9921763756 0.1922486979 0.1831728375 1.412262605 1.028039949 -0.1649461015 0.235007182 -0.1844291703 -0.2075718472 0" mpos="0 0 0.205" mquat="1 0 0 0" />
+  </keyframe>
+</mujoco>

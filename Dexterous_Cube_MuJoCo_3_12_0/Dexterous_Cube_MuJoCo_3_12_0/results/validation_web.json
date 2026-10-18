@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "checks": {
+    "page_net_actual_jpeg_mjpeg": true,
+    "physical_turn_and_renderer_model_rebuild": true,
+    "undo_returns_solved": true,
+    "pause_mid_turn_and_resume": true,
+    "history_restore": true,
+    "sequence_queue_and_clear": true,
+    "stale_invalid_and_foreign_requests_rejected": true,
+    "camera_mode": true,
+    "release_gravity_reset_regrasp": true
+  },
+  "final_state": {
+    "time": 0.2,
+    "phase": "READY",
+    "message": "抓持成立，可选择魔方面转动",
+    "error": null,
+    "paused": false,
+    "grasped": true,
+    "contacts": 8,
+    "finger_contacts": [
+      "left_index",
+      "left_middle",
+      "left_ring",
+      "left_thumb",
+      "right_index",
+      "right_middle",
+      "right_ring",
+      "right_thumb"
+    ],
+    "solved": true,
+    "completed": 0,
+    "current": null,
+    "queue": [],
+    "history": [],
+    "faces": {
+      "U": [
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd",
+        "#f4f1dd"
+      ],
+      "R": [
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643",
+        "#e95643"
+      ],
+      "F": [
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b",
+        "#39b97b"
+      ],
+      "D": [
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47",
+        "#efca47"
+      ],
+      "L": [
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643",
+        "#ef9643"
+      ],
+      "B": [
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc",
+        "#4488dc"
+      ]
+    },
+    "cube_position": [
+      -1.4684845971165978e-18,
+      -5.1234152068362506e-20,
+      0.20454246478614058
+    ],
+    "turn_angle": -0.0,
+    "mujoco_version": "3.12.0",
+    "assisted": true,
+    "revision": 15,
+    "render_fps": 13.6,
+    "demo": false,
+    "camera": "front",
+    "frame_id": 163
+  },
+  "released_height_m": 0.08011270828025463,
+  "browser_visual_test": "not_run",
+  "windows_test": "not_run"
+}

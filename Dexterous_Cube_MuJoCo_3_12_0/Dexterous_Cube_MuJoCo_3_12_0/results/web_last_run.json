@@ -1,0 +1,28 @@
+{
+  "mujoco_version": "3.12.0",
+  "simulation_seconds": 0.21600000000000016,
+  "solved": true,
+  "completed_moves": 0,
+  "history": [],
+  "max_finger_contacts": 10,
+  "grasped": true,
+  "cube_position_m": [
+    -1.3530641366139701e-18,
+    -4.301431852841046e-20,
+    0.20454227927909915
+  ],
+  "max_hand_joint_violation_rad": 0.0,
+  "max_assisted_grasp_position_error_m": 3.176283379019429e-05,
+  "max_layer_endpoint_error_rad": 0.0,
+  "layer_motor_abs_work_j": 5.554371378652536e-12,
+  "max_cubie_endpoint_rebuild_jump_m": 0.0,
+  "turn_records": [],
+  "error": null,
+  "limitations": [
+    "Original primitive dual hands, 20 finger DOF each and 2 assisted wrist slides.",
+    "Contact-gated mocap weld assists cube grasp.",
+    "An internal layer position servo drives face rotation.",
+    "Cubie topology rebuilt at settled endpoints; cube pose/velocity and hand states preserved.",
+    "History inversion only; no vision, arbitrary-state solver or learned manipulation policy."
+  ]
+}

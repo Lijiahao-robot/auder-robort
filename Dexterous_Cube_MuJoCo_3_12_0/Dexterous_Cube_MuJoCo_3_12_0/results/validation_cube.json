@@ -1,0 +1,145 @@
+{
+  "cube_logic": {
+    "passed": true,
+    "checks": {
+      "18_moves_inverse_and_four_turn_identity": true,
+      "noncommuting_layers": true,
+      "six_commutators_identity": true,
+      "long_history_inverse_and_cubie_orientations": true,
+      "bad_moves_rejected": true
+    }
+  },
+  "remaining_faces_and_half_turns": {
+    "passed": true,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 12.54600000000086,
+      "solved": true,
+      "completed_moves": 6,
+      "history": [],
+      "max_finger_contacts": 10,
+      "grasped": true,
+      "cube_position_m": [
+        -1.3216849005393353e-18,
+        -5.44507484931442e-20,
+        0.2045368314619187
+      ],
+      "max_hand_joint_violation_rad": 0.0,
+      "max_assisted_grasp_position_error_m": 6.627610242998516e-05,
+      "max_layer_endpoint_error_rad": 0.0016759374054113874,
+      "layer_motor_abs_work_j": 0.05422738713215594,
+      "max_cubie_endpoint_rebuild_jump_m": 5.2142928882877276e-05,
+      "turn_records": [
+        {
+          "move": "D",
+          "time_s": 2.0899999999999914,
+          "angle_error_rad": 0.001675937405404726,
+          "angular_velocity_rad_s": 0.054801587073400396
+        },
+        {
+          "move": "L'",
+          "time_s": 3.9339999999997883,
+          "angle_error_rad": 0.0016759374054113874,
+          "angular_velocity_rad_s": 0.05480158707361973
+        },
+        {
+          "move": "B2",
+          "time_s": 6.121999999999548,
+          "angle_error_rad": 0.0016741335426182502,
+          "angular_velocity_rad_s": 0.05473183026577545
+        },
+        {
+          "move": "B2",
+          "time_s": 8.309999999999444,
+          "angle_error_rad": 0.0016741335426133652,
+          "angular_velocity_rad_s": 0.05473183026562073
+        },
+        {
+          "move": "L",
+          "time_s": 10.15200000000006,
+          "angle_error_rad": 0.0016759374053838538,
+          "angular_velocity_rad_s": 0.054801587072719635
+        },
+        {
+          "move": "D'",
+          "time_s": 11.994000000000675,
+          "angle_error_rad": 0.0016759374053838538,
+          "angular_velocity_rad_s": 0.05480158707271825
+        }
+      ],
+      "error": null,
+      "limitations": [
+        "Original primitive dual hands, 20 finger DOF each and 2 assisted wrist slides.",
+        "Contact-gated mocap weld assists cube grasp.",
+        "An internal layer position servo drives face rotation.",
+        "Cubie topology rebuilt at settled endpoints; cube pose/velocity and hand states preserved.",
+        "History inversion only; no vision, arbitrary-state solver or learned manipulation policy."
+      ]
+    }
+  },
+  "negative_no_contact": {
+    "passed": true,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 1.7000000000000013,
+      "solved": true,
+      "completed_moves": 0,
+      "history": [],
+      "max_finger_contacts": 0,
+      "grasped": false,
+      "cube_position_m": [
+        1.984253768439147e-10,
+        -8.525211772429418e-08,
+        0.06889845893518008
+      ],
+      "max_hand_joint_violation_rad": 0.0,
+      "max_assisted_grasp_position_error_m": 0.0,
+      "max_layer_endpoint_error_rad": 0.0,
+      "layer_motor_abs_work_j": 6.89378840386324e-18,
+      "max_cubie_endpoint_rebuild_jump_m": 0.0,
+      "turn_records": [],
+      "error": null,
+      "limitations": [
+        "Original primitive dual hands, 20 finger DOF each and 2 assisted wrist slides.",
+        "Contact-gated mocap weld assists cube grasp.",
+        "An internal layer position servo drives face rotation.",
+        "Cubie topology rebuilt at settled endpoints; cube pose/velocity and hand states preserved.",
+        "History inversion only; no vision, arbitrary-state solver or learned manipulation policy."
+      ]
+    }
+  },
+  "release_and_gravity": {
+    "passed": true,
+    "initial_height_m": 0.20453917390085696,
+    "final_height_m": 0.06889841362950355,
+    "report": {
+      "mujoco_version": "3.12.0",
+      "simulation_seconds": 2.3999999999999573,
+      "solved": true,
+      "completed_moves": 0,
+      "history": [],
+      "max_finger_contacts": 10,
+      "grasped": false,
+      "cube_position_m": [
+        4.8340990641421635e-08,
+        1.1264208388969927e-07,
+        0.06889841362950355
+      ],
+      "max_hand_joint_violation_rad": 0.0,
+      "max_assisted_grasp_position_error_m": 3.3647839781741906e-05,
+      "max_layer_endpoint_error_rad": 0.0,
+      "layer_motor_abs_work_j": 7.502051320071617e-11,
+      "max_cubie_endpoint_rebuild_jump_m": 0.0,
+      "turn_records": [],
+      "error": null,
+      "limitations": [
+        "Original primitive dual hands, 20 finger DOF each and 2 assisted wrist slides.",
+        "Contact-gated mocap weld assists cube grasp.",
+        "An internal layer position servo drives face rotation.",
+        "Cubie topology rebuilt at settled endpoints; cube pose/velocity and hand states preserved.",
+        "History inversion only; no vision, arbitrary-state solver or learned manipulation policy."
+      ]
+    }
+  },
+  "success": true
+}

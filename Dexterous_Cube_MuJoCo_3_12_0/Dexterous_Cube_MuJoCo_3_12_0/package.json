@@ -1,0 +1,1 @@
+{"name":"dexterous-cube-demo","private":true,"type":"module","scripts":{"test":"node tools/verify-controls.mjs"}}

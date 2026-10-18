@@ -1,0 +1,74 @@
+{
+  "mujoco_version": "3.12.0",
+  "simulation_seconds": 13.562000000001198,
+  "solved": true,
+  "completed_moves": 6,
+  "history": [],
+  "max_finger_contacts": 10,
+  "grasped": true,
+  "cube_position_m": [
+    -1.7612111769712616e-18,
+    4.826852892211712e-19,
+    0.20453755601356158
+  ],
+  "max_hand_joint_violation_rad": 0.0,
+  "max_assisted_grasp_position_error_m": 6.627610243853388e-05,
+  "max_layer_endpoint_error_rad": 0.0016759374054113874,
+  "layer_motor_abs_work_j": 0.03414043634726691,
+  "turn_records": [
+    {
+      "move": "R",
+      "time_s": 2.0899999999999914,
+      "angle_error_rad": 0.001675937405404726,
+      "angular_velocity_rad_s": 0.05480158707340043
+    },
+    {
+      "move": "U",
+      "time_s": 3.9339999999997883,
+      "angle_error_rad": 0.0016759374054113874,
+      "angular_velocity_rad_s": 0.054801587073619595
+    },
+    {
+      "move": "F'",
+      "time_s": 5.777999999999586,
+      "angle_error_rad": 0.0016759374054113874,
+      "angular_velocity_rad_s": 0.054801587073621594
+    },
+    {
+      "move": "F",
+      "time_s": 8.32399999999945,
+      "angle_error_rad": 0.0016759374054065024,
+      "angular_velocity_rad_s": 0.054801587073460264
+    },
+    {
+      "move": "U'",
+      "time_s": 10.166000000000064,
+      "angle_error_rad": 0.0016759374053838538,
+      "angular_velocity_rad_s": 0.05480158707271607
+    },
+    {
+      "move": "R'",
+      "time_s": 12.00800000000068,
+      "angle_error_rad": 0.0016759374053836318,
+      "angular_velocity_rad_s": 0.054801587072710135
+    }
+  ],
+  "error": null,
+  "limitations": [
+    "Original primitive dual hands, 20 actuated DOF each.",
+    "Contact-gated mocap weld assists cube grasp.",
+    "An internal layer position servo drives face rotation.",
+    "Cubie topology rebuilt at settled endpoints; cube pose/velocity and hand states preserved.",
+    "History inversion only; no vision, arbitrary-state solver or learned manipulation policy."
+  ],
+  "checks": {
+    "finite_state": true,
+    "contact_grasp": true,
+    "six_turns_completed": true,
+    "restored": true,
+    "hand_joint_limits": true,
+    "settled_turn_endpoints": true,
+    "grasp_tracking": true
+  },
+  "success": true
+}
